@@ -1,0 +1,43 @@
+โมเดลที่เหมาะกับข้อมูลของคุณ
+จากข้อมูลที่มี Age, Sex, HGB, WBC, PLT, Neutro, Mono เป็นตัวแปรอิสระ (X) และ Diagnosis เป็นตัวแปรตาม (Y) แบ่งเป็น 5 คลาส (normal, probable CAB, dengue, confirmed CAB, anemia) โมเดลที่เหมาะกับการทำนายโรคมี 2 โมเดลดังนี้
+
+1. Random Forest Classifier:
+
+โมเดลนี้เหมาะกับข้อมูลที่มี จำนวน features สูง
+ทำงานโดยสร้าง decision tree หลายๆ ต้น
+นำผลลัพธ์จาก decision tree แต่ละต้น มาเฉลี่ย
+ช่วยลด overfitting
+มีความแม่นยำสูง
+สามารถอธิบายผลลัพธ์
+2. Support Vector Machine (SVM):
+
+โมเดลนี้เหมาะกับ ข้อมูลที่มี binary classification
+แต่สามารถปรับใช้กับ multi-class classification ได้
+ทำงานโดยหา hyperplane ที่แยกกลุ่มข้อมูลออกจากกัน
+มีความแม่นยำสูง
+ทำงานได้รวดเร็ว
+เหตุผลที่เลือกโมเดลเหล่านี้:
+
+Random Forest Classifier:
+ข้อมูลของคุณมี features 7 ตัว
+โมเดลนี้เหมาะกับข้อมูลที่มี features สูง
+โมเดลนี้มีความแม่นยำสูง
+สามารถอธิบายผลลัพธ์
+SVM:
+โมเดลนี้สามารถปรับใช้กับ multi-class classification
+โมเดลนี้มีความแม่นยำสูง
+ทำงานได้รวดเร็ว
+ข้อควรระวัง:
+
+ควรปรับแต่ง hyperparameters ของโมเดล
+ทดสอบโมเดลกับข้อมูล test set
+เปรียบเทียบผลลัพธ์กับโมเดลอื่นๆ
+โมเดลอื่นๆ ที่สามารถลองใช้:
+
+Gradient Boosting Classifier:
+โมเดลนี้คล้ายกับ Random Forest
+แต่ใช้ ensemble technique ที่แตกต่างกัน
+Neural Network:
+โมเดลนี้เรียนรู้จาก patterns ของข้อมูล
+เหมาะกับข้อมูลที่มี features สูง
+แต่โมเดลนี้ซับซ้อน
